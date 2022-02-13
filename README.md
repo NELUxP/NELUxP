@@ -1,12 +1,13 @@
 - 👋 Hi, I’m @NELUxP
 - 
-- 👀 I’m interested in C/C++ and onethers programming languages
+- 👀 I’m interested in C/C++/C# and onethers programming languages
 - 
 - 🌱 I’m currently learning PS4Tweaks/PS4HACKING/Exploit/Games
 - 
-- 💞️ I’m looking to collaborate on PS4/Homebrews/reverseEngine/hackinggamesonps4/
+- 💞️ I’m looking to collaborate on PS4/Homebrews/reverseengineeringe/ps4/
+-     IDAPRO/GHIDRA
 - 
-- 📫 How to reach me Discord:ＮＥＬＵｘＰ０７９９#1656   /   YT: https://www.youtube.com/channel/UCKSK6H4zpg2Yh1PEhK0sIZw
+- 📫 How to reach me https://twitter.com/NeluZacherks   /   YT: https://www.youtube.com/channel/UCKSK6H4zpg2Yh1PEhK0sIZw
 
 <!---
 NELUxP/NELUxP is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
