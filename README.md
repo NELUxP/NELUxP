@@ -4,7 +4,7 @@
 - 
 - 🌱 I’m currently learning PS4Tweaks/PS4HACKING/Exploit/Games
 - 
-- 💞️ I’m looking to collaborate on PS4/Homebrews/reverseengineeringe/ps4/
+- 💞️ I’m looking to collaborate on PS4/Homebrews/reverseengineering/ps4/
 -     IDAPRO/GHIDRA
 - 
 - 📫 How to reach me https://twitter.com/NeluZacherks   /   YT: https://www.youtube.com/channel/UCKSK6H4zpg2Yh1PEhK0sIZw
