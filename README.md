@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @NELUxP
 - 
-- 👀 I’m interested in C/C++/C# and onethers programming languages
+- 👀 I’m interested in C/C++/C# and others programming languages
 - 
 - 🌱 I’m currently learning PS4Tweaks/PS4HACKING/Exploit/Games
 - 
