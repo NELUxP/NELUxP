@@ -22,10 +22,14 @@
     {
       "name": "Donation For MCHAX4U",
       "description": "Make the project be alive with your support❤️",
-      "link": "https://www.donationalerts.com/r/neluxp_modz",
+      "link": "",
       "langs": "",
       "tools": "",
-      "date": "Website still under development."
+      "date": "website still under development",
+      "custom": {
+        "text": "Donate ❤️",
+        "link": "https://www.donationalerts.com/r/neluxp_modz"
+      }
     }
   ]
 }

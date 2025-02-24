@@ -77,15 +77,22 @@ const { name, description, href, ctext, clink, tools, langs, date } = Astro.prop
   </CardContent>
 
   <CardFooter className="flex flex-col justify-center items-center gap-4 p-6 border-t-4 border-[#8B8B8B] dark:border-[#272727] bg-[#E8E8E8] dark:bg-[#424242]">
-    <LinkBtn
-      className="minecraft-button bg-[#7BC67B] hover:bg-[#5EA15E] text-white px-4 py-2 font-minecraft w-full text-center text-sm sm:text-base truncate block"
-      text="Download"
-      href={href}
-      size="base"
-      target="_blank"
-    />
+    {/* Download Button - Only show if href is not empty */}
     {
-      ctext && (
+      href && href.trim() !== "" && (
+        <LinkBtn
+          className="minecraft-button bg-[#7BC67B] hover:bg-[#5EA15E] text-white px-4 py-2 font-minecraft w-full text-center text-sm sm:text-base truncate block"
+          text="Download"
+          href={href}
+          size="base"
+          target="_blank"
+        />
+      )
+    }
+
+    {/* Additional Custom Button (ctext) - Only show if ctext and clink are provided */}
+    {
+      ctext && clink && clink.trim() !== "" && (
         <LinkBtn
           className="minecraft-button bg-[#7B7BC6] hover:bg-[#5E5EA1] text-white px-4 py-2 font-minecraft w-full text-center text-sm sm:text-base truncate block"
           text={ctext}
