@@ -1,0 +1,149 @@
+---
+import { Image } from "astro:assets";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import LinkBtn from "@/components/atoms/LinkBtn.astro";
+
+const { name, description, href, ctext, clink, tools, langs, date } = Astro.props;
+---
+
+<Card
+  className="relative border-4 border-[#1D1D1D] bg-[#C6C6C6] dark:bg-[#373737] rounded-none shadow-[8px_8px_0_#000000] mx-2 md:mx-12 fade overflow-hidden"
+>
+  <!-- Minecraft-style border corners -->
+  <div class="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-[#FFFFFF] dark:border-[#4A4A4A]"></div>
+  <div class="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-[#FFFFFF] dark:border-[#4A4A4A]"></div>
+  <div class="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-[#8B8B8B] dark:border-[#272727]"></div>
+  <div class="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-[#8B8B8B] dark:border-[#272727]"></div>
+
+  <CardHeader className="border-b-4 border-[#8B8B8B] dark:border-[#272727] bg-[#E8E8E8] dark:bg-[#424242] px-6 py-4">
+    <CardTitle className="text-[#2D2D2D] dark:text-[#FFFFFF] font-minecraft text-xl">
+      {name}
+    </CardTitle>
+  </CardHeader>
+
+  <CardContent className="p-6 space-y-6">
+    <p class="text-[#2D2D2D] dark:text-[#E8E8E8] font-minecraft-regular">
+      {description}
+    </p>
+    <p class="text-sm text-[#555555] dark:text-[#A8A8A8] font-minecraft-regular">
+      {date}
+    </p>
+
+    {/* Languages Section */}
+    {
+      langs && langs.trim() !== "" && (
+        <div class="space-y-4">
+          <div class="flex justify-center items-center gap-3 flex-wrap bg-[#8B8B8B]/20 dark:bg-[#1D1D1D]/40 p-4 rounded">
+            {langs.split(",").map((lang: string) => (
+              <div class="relative group">
+                <Image
+                  src={`https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/${lang.trim()}.svg`}
+                  width="44"
+                  height="44"
+                  alt={`${lang.trim()} icon`}
+                  class="transform hover:scale-110 transition-transform duration-200"
+                />
+                <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs font-minecraft-regular text-[#2D2D2D] dark:text-[#E8E8E8]">
+                  {lang.trim()}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )
+    }
+
+    {/* Tools Section */}
+    {
+      tools && tools.trim() !== "" && (
+        <div class="flex justify-center items-center gap-3 flex-wrap bg-[#8B8B8B]/20 dark:bg-[#1D1D1D]/40 p-4 rounded">
+          {tools.split(",").map((tool: string) => (
+            <div class="relative group">
+              <Image
+                src={`https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/${tool.trim()}.svg`}
+                width="44"
+                height="44"
+                alt={`${tool.trim()} icon`}
+                class="transform hover:scale-110 transition-transform duration-200"
+              />
+              <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs font-minecraft-regular text-[#2D2D2D] dark:text-[#E8E8E8]">
+                {tool.trim()}
+              </span>
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </CardContent>
+
+  <CardFooter className="flex flex-col sm:flex-row justify-center items-center gap-4 p-6 border-t-4 border-[#8B8B8B] dark:border-[#272727] bg-[#E8E8E8] dark:bg-[#424242]">
+    <LinkBtn
+      className="minecraft-button bg-[#7BC67B] hover:bg-[#5EA15E] text-white px-4 sm:px-6 py-2 font-minecraft w-full sm:w-auto text-center"
+      text="Download"
+      href={href}
+      size="base"
+      target="_blank"
+    />
+    {
+      ctext && (
+        <LinkBtn
+          className="minecraft-button bg-[#7B7BC6] hover:bg-[#5E5EA1] text-white px-4 sm:px-6 py-2 font-minecraft w-full sm:w-auto text-center"
+          text={ctext}
+          href={clink}
+          size="base"
+          target="_blank"
+        />
+      )
+    }
+  </CardFooter>
+</Card>
+
+<style>
+  @font-face {
+    font-family: 'Minecraft';
+    src: url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/fonts/minecraft.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'MinecraftRegular';
+    src: url('https://cdn.jsdelivr.net/gh/South-Paw/typeface-minecraft@master/fonts/minecraft-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .minecraft-button {
+    position: relative;
+    border: 2px solid #000000;
+    transition: all 0.1s ease-in-out;
+    text-shadow: 2px 2px #000000;
+    min-width: 120px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .minecraft-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 #000000;
+  }
+
+  .minecraft-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  .skills-icons {
+    filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.25));
+  }
+</style>

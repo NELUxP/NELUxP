@@ -1,0 +1,23 @@
+---
+import { Download as p } from "@/content/data/downloads.json";
+import Project from "@/components/molecules/Download.astro";
+---
+
+{
+  p.map((project) => (
+    <>
+      <Project
+        name={project.name}
+        description={project.description}
+        href={project.link}
+        ctext={project.custom?.text}
+        clink={project.custom?.link}
+        langs={project.langs}
+        tools={project.tools}
+        date={project.date}
+      />
+      <br />
+      <br />
+    </>
+  ))
+}

@@ -1,0 +1,158 @@
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Clean white background */
+    --foreground: 0 0% 20%; /* Dark text */
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 0 0% 20%; /* Dark text */
+    --popover: 0 0% 100%; /* White popover */
+    --popover-foreground: 0 0% 20%; /* Dark text */
+    --primary: 200 85% 45%; /* Minecraft Bedrock blue */
+    --primary-foreground: 0 0% 100%; /* White text */
+    --secondary: 0 0% 96%; /* Light gray */
+    --secondary-foreground: 0 0% 20%; /* Dark text */
+    --muted: 0 0% 92%; /* Lighter gray */
+    --muted-foreground: 0 0% 40%; /* Medium gray text */
+    --accent: 200 85% 45%; /* Minecraft Bedrock blue */
+    --accent-foreground: 0 0% 100%; /* White text */
+    --destructive: 0 85% 60%; /* Bright red */
+    --destructive-foreground: 0 0% 100%; /* White text */
+    --border: 0 0% 90%; /* Light border */
+    --input: 0 0% 96%; /* Light input background */
+    --ring: 200 85% 45%; /* Minecraft Bedrock blue */
+    --radius: 0.5rem; /* Slightly rounded corners like Bedrock UI */
+  }
+
+  .dark {
+    --background: 0 0% 10%; /* Dark background */
+    --foreground: 0 0% 98%; /* Light text */
+    --card: 0 0% 15%; /* Dark cards */
+    --card-foreground: 0 0% 98%; /* Light text */
+    --popover: 0 0% 15%; /* Dark popover */
+    --popover-foreground: 0 0% 98%; /* Light text */
+    --primary: 200 85% 45%; /* Minecraft Bedrock blue */
+    --primary-foreground: 0 0% 100%; /* White text */
+    --secondary: 0 0% 20%; /* Darker gray */
+    --secondary-foreground: 0 0% 98%; /* Light text */
+    --muted: 0 0% 25%; /* Dark muted */
+    --muted-foreground: 0 0% 80%; /* Light muted text */
+    --accent: 200 85% 45%; /* Minecraft Bedrock blue */
+    --accent-foreground: 0 0% 100%; /* White text */
+    --destructive: 0 85% 60%; /* Bright red */
+    --destructive-foreground: 0 0% 100%; /* White text */
+    --border: 0 0% 30%; /* Dark border */
+    --input: 0 0% 20%; /* Dark input background */
+    --ring: 200 85% 45%; /* Minecraft Bedrock blue */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+  h3 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+}
+
+/* Minecraft Bedrock specific styles */
+body {
+  font-family: 'Minecraftia', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .navbar {
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modern fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Bedrock UI gradient */
+.custom-gradient {
+  background: linear-gradient(15deg, #19d26c 10%, #2196f3 100%, #2196f3 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Modern typewriter effect */
+.typewriter h1 {
+  color: #fff;
+  overflow: hidden;
+  border-right: 0.15em solid rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  animation:
+    typing 2s ease-out,
+    blink-caret 0.75s step-end infinite,
+    hide-caret 0s step-end 2s forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@keyframes hide-caret {
+  to {
+    border-color: transparent;
+  }
+}

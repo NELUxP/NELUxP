@@ -1,0 +1,28 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import { paragraphs, resume } from "@/content/data/about.json";
+import { Image } from "astro:assets";
+import favicon from "@/assets/main_icon.png";
+---
+
+<PageLayout title="About" header="About MCHAX4U">
+  <div class="flex flex-col md:flex-row gap-6 items-center md:mx-12 fade">
+    <div class="flex flex-col items-center">
+      <Image
+        src={favicon}
+        alt="Square portrait"
+        class="max-w-80 max-h-140 rounded"
+      />
+    </div>
+    <div>
+      {
+        paragraphs.map((paragraph, index) => (
+          <>
+            <p class="mx-2 md:mx-12">{paragraph}</p>
+            <br />
+          </>
+        ))
+      }
+    </div>
+  </div>
+</PageLayout>
