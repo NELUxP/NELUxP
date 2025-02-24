@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.nayasinghania.com/sitemap-0.xml
+Sitemap: https://neluxp.github.io/NELUxP/sitemap-0.xml
