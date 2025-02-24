@@ -1,6 +1,6 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
-import { paragraphs, resume } from "@/content/data/about.json";
+import { paragraphs } from "@/content/data/about.json";
 import { Image } from "astro:assets";
 import favicon from "@/assets/main_icon.png";
 ---
@@ -16,7 +16,7 @@ import favicon from "@/assets/main_icon.png";
     </div>
     <div>
       {
-        paragraphs.map((paragraph, index) => (
+        paragraphs.map((paragraph) => (
           <>
             <p class="mx-2 md:mx-12">{paragraph}</p>
             <br />
