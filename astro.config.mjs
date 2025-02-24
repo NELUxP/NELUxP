@@ -11,7 +11,7 @@ import partytown from "@astrojs/partytown";
 
 export default defineConfig({
   // change the 'site' value to your site's domain
-  site: "https://neluxp.github.io/",
+  site: "https://github.com/NELUxP/",
   image: {
     domains: ["raw.githubusercontent.com"],
   },

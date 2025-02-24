@@ -3,7 +3,7 @@
     {
       "name": "latest GoldHEN Patch",
       "description": "The Latest PS4 for Minecraft Bedrock is Patch 3.00 known as 1.21.41, This is in the format of a .xml file for use with the Built-In GoldHen Cheat Manager.",
-      "link": "/public/CUSA00265.xml",
+      "link": "https://cdn.discordapp.com/attachments/718879276329467926/1332374745236242525/CUSA00265.xml?ex=67bde4ad&is=67bc932d&hm=9fc98c8355b63c5f0a3f7ad5834a4c42ea3fe75851dc553b32c04351b8c676f9&",
       "langs": "",
       "date": "10-08-2024",
       "custom": {
@@ -20,12 +20,12 @@
       "date": "01-10-2024"
     },
     {
-      "name": "FPKG PSN BYPASS",
-      "description": "As a FPKG Patch Update You Dont Need Any Patches It is already Built Into The eboot.bin Is Already Patched, For This To Work You Need To Install The Base Game FPKG, Then Install This Modified Update.",
-      "link": "",
+      "name": "Donation For MCHAX4U",
+      "description": "Make the project be alive with your support❤️",
+      "link": "https://www.donationalerts.com/r/neluxp_modz",
       "langs": "",
       "tools": "",
-      "date": "OUTDATED"
+      "date": "Website still under development."
     }
   ]
 }
