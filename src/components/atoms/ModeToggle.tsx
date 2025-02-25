@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
+import {  Moon,  Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -35,10 +35,12 @@ export function ModeToggle() {
       size="icon"
       onClick={() => setStateWrapper()}
       aria-label="light/dark mode toggle"
-      className="border-none"
+      className="relative w-10 h-10 rounded-md bg-white dark:bg-slate-900 transition-colors duration-300"
     >
-      <Sun className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Sun className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 w-5 text-yellow-500transition-all duration-300${theme === 'dark' ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}
+      />
+      <Moon className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 w-5text-slate-300transition-all duration-300${theme === 'dark' ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}
+      />
     </Button>
   );
 }
