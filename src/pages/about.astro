@@ -3,6 +3,8 @@ import PageLayout from "@/layouts/PageLayout.astro";
 import { paragraphs } from "@/content/data/about.json";
 import { Image } from "astro:assets";
 import favicon from "@/assets/main_icon.png";
+import mc_cheat from "@/assets/mc_cheat.png";
+import prog_mchax4u from "@/assets/prog_mchax4u.png";
 ---
 
 <PageLayout title="About" header="About MCHAX4U">
@@ -20,7 +22,7 @@ import favicon from "@/assets/main_icon.png";
       </div>
       <div class="group transition-transform duration-300 ease-in-out transform hover:scale-125 relative hover:z-10">
         <Image
-          src="/public/prog_mchax4u.png"
+          src={mc_cheat}
           alt="MCHAX4U Logo 1"
           class="w-full max-w-70 h-auto rounded-lg shadow-lg"
           width={500}
@@ -29,7 +31,7 @@ import favicon from "@/assets/main_icon.png";
       </div>
       <div class="group transition-transform duration-300 ease-in-out transform hover:scale-125 relative hover:z-10">
         <Image
-          src="/public/mc_cheat.png"
+          src={prog_mchax4u}
           alt="MCHAX4U Logo 2"
           class="w-full max-w-70 h-auto rounded-lg shadow-lg"
           width={500}
