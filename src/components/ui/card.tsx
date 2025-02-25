@@ -8,7 +8,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden w-full max-w-[400px] mx-auto", // Ensure consistent width
+      "rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden w-full max-w-[600px] mx-auto", // Ensure consistent width
       className,
     )}
     {...props}

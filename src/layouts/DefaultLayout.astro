@@ -40,10 +40,8 @@ const { title } = Astro.props;
   <br />
   <br />
   <br />
-  <div
-    class="custom-gradient md:container mx-4 md:mx-auto min-h-[76vh] rounded-xl text-white"
-  >
-    <slot />
+  <div class="custom-gradient md:container mx-4 md:mx-auto min-h-[76vh] rounded-xl text-white">
+  <slot />
   </div>
   <div class="fixed bottom-4 right-4">
     <ModeToggle client:load />

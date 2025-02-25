@@ -3,7 +3,7 @@
     {
       "name": "latest GoldHEN Patch",
       "description": "The Latest PS4 for Minecraft Bedrock is Patch 3.00 known as 1.21.41, This is in the format of a .xml file for use with the Built-In GoldHen Cheat Manager.",
-      "link": "https://cdn.discordapp.com/attachments/718879276329467926/1332374745236242525/CUSA00265.xml?ex=67bde4ad&is=67bc932d&hm=9fc98c8355b63c5f0a3f7ad5834a4c42ea3fe75851dc553b32c04351b8c676f9&",
+      "link": "https://github.com/NELUxP/ps4_mcbedrock_psn_bypass/releases/download/v1.0/CUSA00265.xml",
       "langs": "",
       "date": "10-08-2024",
       "custom": {
@@ -17,7 +17,7 @@
       "link": "https://github.com/NELUxP/MCHAX4U_2.35_/releases/download/v.0.0.2/PS4_MCHAX4U_2.35.zip",
       "langs": "CS",
       "tools": "Windows-Light",
-      "date": "01-10-2024"
+      "date": "01-10-2024 In development"
     },
     {
       "name": "Donation For MCHAX4U",

@@ -16,16 +16,16 @@ const { name, description, href, ctext, clink, tools, langs, date } = Astro.prop
   className="relative border-4 border-[#1D1D1D] bg-[#C6C6C6] dark:bg-[#373737] rounded-none shadow-[8px_8px_0_#000000] mx-2 md:mx-12 fade overflow-hidden"
 >
   <CardHeader className="border-b-4 border-[#8B8B8B] dark:border-[#272727] bg-[#E8E8E8] dark:bg-[#424242] px-6 py-4">
-    <CardTitle className="text-[#2D2D2D] dark:text-[#FFFFFF] font-minecraft text-xl">
+    <CardTitle className="text-[#2D2D2D] dark:text-[#FFFFFF]  text-xl">
       {name}
     </CardTitle>
   </CardHeader>
 
   <CardContent className="p-6 space-y-6">
-    <p class="text-[#2D2D2D] dark:text-[#E8E8E8] font-minecraft-regular">
+    <p class="text-[#2D2D2D] dark:text-[#E8E8E8] text-pretty text-justify">
       {description}
     </p>
-    <p class="text-sm text-[#555555] dark:text-[#A8A8A8] font-minecraft-regular">
+    <p class="text-sm text-[#555555] dark:text-[#A8A8A8]">
       {date}
     </p>
 
@@ -43,7 +43,7 @@ const { name, description, href, ctext, clink, tools, langs, date } = Astro.prop
                   alt={`${lang.trim()} icon`}
                   class="transform hover:scale-110 transition-transform duration-200"
                 />
-                <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs font-minecraft-regular text-[#2D2D2D] dark:text-[#E8E8E8]">
+                <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs  text-[#2D2D2D] dark:text-[#E8E8E8]">
                   {lang.trim()}
                 </span>
               </div>
@@ -66,7 +66,7 @@ const { name, description, href, ctext, clink, tools, langs, date } = Astro.prop
                 alt={`${tool.trim()} icon`}
                 class="transform hover:scale-110 transition-transform duration-200"
               />
-              <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs font-minecraft-regular text-[#2D2D2D] dark:text-[#E8E8E8]">
+              <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs  text-[#2D2D2D] dark:text-[#E8E8E8]">
                 {tool.trim()}
               </span>
             </div>
@@ -81,7 +81,7 @@ const { name, description, href, ctext, clink, tools, langs, date } = Astro.prop
     {
       href && href.trim() !== "" && (
         <LinkBtn
-          className="minecraft-button bg-[#7BC67B] hover:bg-[#5EA15E] text-white px-4 py-2 font-minecraft w-full text-center text-sm sm:text-base truncate block"
+          className="bg-[#7BC67B] hover:bg-[#5EA15E] text-white px-4 py-2 text-center text-sm sm:text-base truncate block"
           text="Download"
           href={href}
           size="base"
@@ -94,7 +94,7 @@ const { name, description, href, ctext, clink, tools, langs, date } = Astro.prop
     {
       ctext && clink && clink.trim() !== "" && (
         <LinkBtn
-          className="minecraft-button bg-[#7B7BC6] hover:bg-[#5E5EA1] text-white px-4 py-2 font-minecraft w-full text-center text-sm sm:text-base truncate block"
+          className="bg-[#7B7BC6] hover:bg-[#5E5EA1] text-white px-4 py-2 text-center text-sm sm:text-base truncate block"
           text={ctext}
           href={clink}
           size="base"
