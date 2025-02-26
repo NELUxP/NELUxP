@@ -15,29 +15,35 @@ import ico from "@/assets/favicon.png";
   <meta name="author" content="NELUxP MoDz" />
   <meta name="geo.region" content="RU" />
 
-  <!-- Favicon -->
-
-  <link rel="apple-touch-icon" href={ico.src} sizes="180x180" /> <!-- For Apple devices -->
+  <!-- Google Tag Manager with Partytown -->
+  <script type="text/partytown">
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K4BT4CQG');
+  </script>
+  <!-- End Google Tag Manager -->
 
   <!-- Sitemap -->
   <link rel="sitemap" href="/sitemap-0.xml" />
 </head>
-<script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script><meta name="amp-consent-blocking" content="amp-ad">
-<!-- Google tag (gtag.js) -->
+
+<!-- Google tag (gtag.js) with Partytown -->
 <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-PETSSPFVCK" is:inline></script>
-<script type="text/partytown" is:inline> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+<script type="text/partytown" is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-PETSSPFVCK');
 </script>
-<script type="text/javascript">		
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'G-PETSSPFVCK', 'mchax4u.netlify.app');
-ga('set', 'anonymizeIp', true);
-ga('send', 'pageview');
-</script>
-
+<!-- Other scripts -->
 <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/9301f7e262419.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
+<script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
+<meta name="amp-consent-blocking" content="amp-ad" />
