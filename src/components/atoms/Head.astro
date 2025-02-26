@@ -8,21 +8,26 @@ import ico from "@/assets/favicon.png";
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{`${name} | ${title}`}</title>
+  <link rel="icon" href={ico.src} type="image/png" /> <!-- Default favicon -->
+  <link rel="icon" href={ico.src} type="image/png" sizes="32x32" />
   <meta name="description" content="Play without limits on your jailbroken PS4" />
   <meta name="keywords" content="PS4, jailbreak, gaming, mods, hacks" />
   <meta name="author" content="NELUxP MoDz" />
-  <meta property="og:url" content="https://mchax4u.netlify.app/">
-  <meta property="og:site_name" content="MCHAX4U" />
   <meta name="geo.region" content="RU" />
-  <meta property="og:image" content={ico.src}/>
-  <link rel="icon" href={ico.src} />
+
+  <!-- Favicon -->
+
+  <link rel="apple-touch-icon" href={ico.src} sizes="180x180" /> <!-- For Apple devices -->
+
+  <!-- Sitemap -->
   <link rel="sitemap" href="/sitemap-0.xml" />
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script
   type="text/partytown"
   async
-  src="https://www.googletagmanager.com/gtag/js?id=G-TFZL7HYSL7"
+  src="https://www.googletagmanager.com/gtag/js?id=GTM-K4BT4CQG"
   is:inline></script>
 <script type="text/partytown" is:inline>
   window.dataLayer = window.dataLayer || [];
@@ -31,5 +36,5 @@ import ico from "@/assets/favicon.png";
   }
   gtag("js", new Date());
 
-  gtag("config", "G-TFZL7HYSL7");
+  gtag("config", "GTM-K4BT4CQG");
 </script>

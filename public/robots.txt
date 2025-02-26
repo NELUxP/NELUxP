@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://neluxp.github.io/NELUxP/sitemap-0.xml
+Sitemap: https://mchax4u.netlify.app/
