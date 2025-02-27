@@ -2,7 +2,6 @@
 import { social, copyright } from "@/content/data/footer.json";
 import { Image } from "astro:assets";
 ---
-
 <br />
 <br />
 <footer class="text-center dark:bg-zinc-800 bg-zinc-100 pb-6">
@@ -39,6 +38,7 @@ import { Image } from "astro:assets";
       width="72"
       height="64"
       class="hidden dark:block"
+      loading="lazy"
     />
     <Image
       src="/astro-logo-dark.svg"
@@ -46,6 +46,7 @@ import { Image } from "astro:assets";
       width="72"
       height="64"
       class="block dark:hidden"
+      loading="lazy"
     />
   </div>
   <p class="text-xs">
