@@ -71,8 +71,12 @@
 /* Minecraft Bedrock specific styles */
 body {
   font-family: 'Minecraftia', system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: none; /* Disable antialiasing for a pixelated effect */
+  -moz-osx-font-smoothing: none; /* Disable antialiasing for a pixelated effect */
+  background-color: #6b6b6b; /* Gray background similar to Minecraft's UI */
+  color: #ffffff; /* White text color */
+  line-height: 1.8; /* Tight line height for a compact, blocky feel */
+
 }
 
 html,
@@ -121,38 +125,37 @@ body {
 }
 
 /* Modern typewriter effect */
+/* Modern typewriter effect with looping */
+/* Typewriter effect without looping */
+/* Typewriter effect with stopped blinking caret */
 .typewriter h1 {
   color: #fff;
-  overflow: hidden;
-  border-right: 0.15em solid rgba(255, 255, 255, 0.8);
-  white-space: nowrap;
+  overflow: hidden; /* Hide overflow text */
+  border-right: 0.15em solid rgba(255, 255, 255, 0.8); /* Blinking caret */
+  white-space: nowrap; /* Keep text in one line */
+  margin: 0 auto; /* Center the text */
+  letter-spacing: 0.15em; /* Add spacing between letters for a typewriter feel */
+  display: inline-block; /* Ensure text fits perfectly */
   animation:
-    typing 2s ease-out,
-    blink-caret 0.75s step-end infinite,
-    hide-caret 0s step-end 2s forwards;
+    typing 2.5s steps(20, end) forwards, /* Typing animation (stops at the end) */
+    blink-caret 0.75s step-end 3.5s; /* Blinking caret animation (stops after typing ends) */
 }
 
 @keyframes typing {
   from {
-    width: 0;
+    width: 0; /* Start with no width */
   }
   to {
-    width: 100%;
+    width: 100%; /* Expand to full width */
   }
 }
 
 @keyframes blink-caret {
   from,
   to {
-    border-color: transparent;
+    border-color: transparent; /* Hide caret */
   }
   50% {
-    border-color: rgba(255, 255, 255, 0.8);
-  }
-}
-
-@keyframes hide-caret {
-  to {
-    border-color: transparent;
+    border-color: rgba(255, 255, 255, 0.8); /* Show caret */
   }
 }

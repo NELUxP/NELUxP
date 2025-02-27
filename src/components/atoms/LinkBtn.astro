@@ -5,14 +5,14 @@ const { text, href, size, target = "_self", className = "" } = Astro.props;
 // Function to calculate font size based on text length
 const getFontSize = (text: string) => {
   const length = text.length;
-  if (length > 20) return "text-xs"; // Smaller font for long text
-  if (length > 15) return "text-sm"; // Small font for moderate text
+  if (length > 10) return "text-xs"; // Smaller font for long text
+  if (length > 25) return "text-sm"; // Small font for moderate text
   return `text-${size}`; // Use the provided size for short text
 };
 ---
 
 <a href={href} target={text === "Resume" ? "_blank" : target}>
-  <Button variant="link" className="block w-full px-3 py-1.5"> <!-- Smaller padding -->
+  <Button variant="link" className="w-full px-6 py-1.5"> <!-- Smaller padding -->
     <p class={`${getFontSize(text)} truncate ${className}`}>{text}</p>
   </Button>
 </a>
