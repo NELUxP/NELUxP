@@ -3,6 +3,7 @@
     {
       "name": "latest GoldHEN Patch",
       "description": "The Latest PS4 for Minecraft Bedrock is Patch 3.00 known as 1.21.41, This is in the format of a .xml file for use with the Built-In GoldHen Cheat Manager.",
+      "changelog":"Initial release v1",
       "link": "https://github.com/NELUxP/ps4_mcbedrock_psn_bypass/releases/download/v1.0/CUSA00265.xml",
       "langs": "",
       "date": "10-08-2024",
@@ -14,6 +15,7 @@
     {
       "name": "MCHAX4U Tool x64",
       "description": "A Real Time Modding Tool That Allows You To Enable and Disable Mods for Minecraft ugly Bedrock Edition PS4 Directly from Your Computer (Requires the PS4Debug Payload to be Loaded.",
+      "changelog":"Initial release v1",
       "link": "https://github.com/NELUxP/MCHAX4U_2.35_/releases/download/v.0.0.2/PS4_MCHAX4U_2.35.zip",
       "langs": "CS",
       "tools": "Windows-Light",
