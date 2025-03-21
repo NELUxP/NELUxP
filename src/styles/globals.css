@@ -159,7 +159,7 @@ body {
     border-color: transparent; /* Hide caret */
   }
   50% {
-    border-color: rgba(255, 255, 255, 0.8); /* Show caret */
+    border-color: rgba(255, 255, 255, 0.7); /* Show caret */
   }
 }
 /* Base styles for the LinkBtn */
