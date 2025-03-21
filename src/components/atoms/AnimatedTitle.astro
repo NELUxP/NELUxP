@@ -1,0 +1,45 @@
+---
+// AnimatedTitle.astro - Add this component to your layout
+const { baseTitle } = Astro.props;
+---
+
+<script define:vars={{ baseTitle }}>
+  // Array of emojis to cycle through
+  const emojis = ["🎮", "🕹️", "🎯", "🏆", "⚡", "🚀", "💥", "✨"];
+  let currentIndex = 0;
+  let direction = 1;
+  let originalTitle = baseTitle || document.title;
+  
+  // Function to update the title with the next emoji
+  function updateTitle() {
+    // Get current emoji and update index for next time
+    const emoji = emojis[currentIndex];
+    
+    // Update the title with the emoji
+    document.title = `${emoji} ${originalTitle} ${emoji}`;
+    
+    // Move to next emoji with a ping-pong effect
+    currentIndex += direction;
+    
+    // Reverse direction if we reach the end or beginning
+    if (currentIndex >= emojis.length - 1 || currentIndex <= 0) {
+      direction *= -1;
+    }
+  }
+  
+  // Update the title every 2 seconds
+  setInterval(updateTitle, 2000);
+  
+  // Set initial title
+  updateTitle();
+  
+  // Reset title when user leaves the page
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      document.title = originalTitle;
+    } else {
+      updateTitle();
+    }
+  });
+</script>
+

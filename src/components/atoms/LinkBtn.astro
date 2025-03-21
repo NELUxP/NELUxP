@@ -12,7 +12,7 @@ const getFontSize = (text: string) => {
 ---
 
 <a href={href} target={text === "Resume" ? "_blank" : target}>
-  <Button variant="link" className="w-full px-6 py-1.5"> <!-- Smaller padding -->
+  <Button variant="default" className="w-full px-6 py-1.5"> <!-- Smaller padding -->
     <p class={`${getFontSize(text)} truncate ${className}`}>{text}</p>
   </Button>
 </a>

@@ -26,7 +26,10 @@
     --ring: 200 85% 45%; /* Minecraft Bedrock blue */
     --radius: 0.5rem; /* Slightly rounded corners like Bedrock UI */
   }
-
+.div {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
   .dark {
     --background: 0 0% 10%; /* Dark background */
     --foreground: 0 0% 98%; /* Light text */
@@ -158,4 +161,17 @@ body {
   50% {
     border-color: rgba(255, 255, 255, 0.8); /* Show caret */
   }
+}
+/* Base styles for the LinkBtn */
+
+#auth-popover {
+  width: 300px;
+}
+
+#auth-popover input {
+  outline: none;
+}
+
+#auth-popover button {
+  transition: background-color 0.3s ease;
 }

@@ -81,7 +81,7 @@ const { name, description, changelog, href, ctext, clink, tools, langs, date } =
     {/* Download Button - Only show if href is not empty */}
     {href && href.trim() !== "" && (
       <LinkBtn
-        className="w-full bg-[#3b8526] hover:bg-[#5EA15E] text-white text-center"
+        className="w-full"
         text="Download"
         href={href}
         size="base"
@@ -92,7 +92,7 @@ const { name, description, changelog, href, ctext, clink, tools, langs, date } =
     {/* Additional Custom Button (ctext) - Only show if ctext and clink are provided */}
     {ctext && clink && clink.trim() !== "" && (
       <LinkBtn
-        className="w-full bg-[#7B7BC6] hover:bg-[#5E5EA1] text-white text-center"
+        className="w-full text-white text-center"
         text={ctext}
         href={clink}
         size="base"

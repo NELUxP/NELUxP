@@ -1,49 +1,61 @@
 ---
+// Example of how to use the AnimatedTitle component in your layout
+import AnimatedTitle from '../atoms/AnimatedTitle.astro';
 const { title } = Astro.props;
 import { name } from "@/content/data/about.json";
 import ico from "@/assets/favicon.png";
 ---
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{`${name} | ${title}`}</title>
-  <link rel="icon" href={ico.src} type="image/png" /> <!-- Default favicon -->
-  <link rel="shortcut icon" href={ico.src} type="image/png" /> <!-- Default favicon -->
-  <meta name="description" content="Play without limits on your jailbroken PS4" />
-  <meta name="keywords" content="PS4, jailbreak, gaming, mods, hacks" />
-  <meta name="author" content="NELUxP MoDz" />
-  <meta name="geo.region" content="RU" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{`${name} | ${title}`}</title>
+    <link rel="icon" href={ico.src} type="image/png" />
+    <link rel="shortcut icon" href={ico.src} type="image/png" />
+    <meta name="description" content="Play without limits on your jailbroken PS4" />
+    <meta name="keywords" content="PS4, jailbreak, gaming, mods, hacks" />
+    <meta name="author" content="NELUxP MoDz" />
+    <meta name="geo.region" content="RU" />
 
-  <!-- Google Tag Manager with Partytown -->
-  <script type="text/partytown">
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),
-          dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K4BT4CQG');
-  </script>
-  <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager with Partytown -->
+    <script type="text/partytown">
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-K4BT4CQG');
+    </script>
+    <!-- End Google Tag Manager -->
 
-  <!-- Sitemap -->
-  <link rel="sitemap" href="/sitemap-0.xml" />
-</head>
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-0.xml" />
+    
+    <!-- Google tag (gtag.js) with Partytown -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-PETSSPFVCK" is:inline></script>
+    <script type="text/partytown" is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PETSSPFVCK');
+    </script>
 
-<!-- Google tag (gtag.js) with Partytown -->
-<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-PETSSPFVCK" is:inline></script>
-<script type="text/partytown" is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PETSSPFVCK');
-</script>
+    <!-- Other scripts -->
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/9301f7e262419.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
+    <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
+    <meta name="amp-consent-blocking" content="amp-ad" />
+    
+    <!-- Add the AnimatedTitle component -->
+    <AnimatedTitle baseTitle={`${name} | ${title}`} />
+  </head>
+  <body>
+    <!-- Your page content here -->
+    <slot />
+  </body>
+</html>
 
-<!-- Other scripts -->
-<script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/9301f7e262419.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="0"></script>
-<script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
-<meta name="amp-consent-blocking" content="amp-ad" />
